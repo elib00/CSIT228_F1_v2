@@ -22,14 +22,12 @@ public class HelloController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
-    @FXML
-    protected void onSigninClick() throws IOException {
-        Parent homeview = FXMLLoader.load(HelloApplication.class
-                .getResource("home-view.fxml"));
-        AnchorPane p = (AnchorPane) pnLogin.getParent();
-        p.getChildren().remove(pnLogin);
-        p.getChildren().add(homeview);
-
-
-    }
+//    @FXML
+//    protected void onSigninClick() throws IOException {
+//        Parent homeview = FXMLLoader.load(HelloApplication.class
+//                .getResource("home-view.fxml"));
+//        AnchorPane p = (AnchorPane) pnLogin.getParent();
+//        p.getChildren().remove(pnLogin);
+//        p.getChildren().add(homeview);
+//    }
 }
