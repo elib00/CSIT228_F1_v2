@@ -26,7 +26,7 @@ public class TaskCardController {
 
     private int taskID;
     public void setTaskCardValues(String title, String content, int taskID){
-        taskCardTitle.setText(title);
+        taskCardTitle.setText("Title: " + title);
         taskCardContent.setText(content);
         this.taskID = taskID;
     }

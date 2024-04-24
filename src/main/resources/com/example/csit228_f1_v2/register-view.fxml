@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.csit228_f1_v2.RegisterController"
-      fx:id="registerContainer" prefHeight="400.0" prefWidth="600.0">
-    <GridPane hgap="10" vgap="10" alignment="CENTER">
-        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-        <TextField fx:id="registerUsernameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <TextField fx:id="registerEmailField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-        <PasswordField fx:id="registerPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+<VBox fx:id="registerContainer" alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #E8C766" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.csit228_f1_v2.RegisterController">
+    <GridPane alignment="CENTER" hgap="10" vgap="10">
+        <Label  style="-fx-font-size: 20px;"  text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="registerUsernameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label style="-fx-font-size: 20px;"  text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="registerEmailField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label style="-fx-font-size: 20px;"  text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <PasswordField fx:id="registerPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
     </GridPane>
 
-    <VBox spacing="10" alignment="CENTER">
-        <Button text="Create Account" fx:id="createAccountButton" onAction="#handleCreateAccount"/>
-        <Button text="Return " fx:id="returnToLoginButton" onAction="#handleReturnToLogin"/>
-    </VBox>
+    <HBox alignment="CENTER" spacing="10">
+        <Button style="-fx-background-color: #E7E6DD;"  fx:id="createAccountButton" onAction="#handleCreateAccount" prefHeight="26.0" prefWidth="111.0" text="Create Account" />
+        <Button style="-fx-background-color: #E7E6DD;"  fx:id="returnToLoginButton" onAction="#handleReturnToLogin" prefHeight="26.0" prefWidth="111.0" text="Return " />
+    </HBox>
 </VBox>

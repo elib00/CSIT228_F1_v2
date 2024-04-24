@@ -10,15 +10,15 @@
 
 <?import javafx.scene.control.TextArea?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.csit228_f1_v2.EditTaskController"
-      prefHeight="400.0" prefWidth="600.0">
+      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E8C766">
     <GridPane hgap="10" vgap="10" alignment="CENTER">
-        <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label style="-fx-font-size: 20px;" text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
         <TextField fx:id="editTaskTitleField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-        <Label text="Content:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label style="-fx-font-size: 20px;" text="Content:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
         <TextArea fx:id="editTaskContentField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
     </GridPane>
 
     <HBox spacing="10" alignment="CENTER">
-        <Button text="Save Changes" fx:id="submitEditTask" onAction="#handleSubmitEditTask"/>
+        <Button style="-fx-font-size: 12px; -fx-background-color: #E7E6DD;" text="Save Changes" fx:id="submitEditTask" onAction="#handleSubmitEditTask"/>
     </HBox>
 </VBox>

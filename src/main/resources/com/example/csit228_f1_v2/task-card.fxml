@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <!-- TaskCard.fxml -->
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.csit228_f1_v2.TaskCardController"
-      prefWidth="280" prefHeight="160" spacing="5"
-      style="-fx-background-color: #f0f0f0; -fx-padding: 10px; -fx-border-color: #ccc; -fx-border-width: 1px; -fx-border-radius: 5px;">
+<VBox prefHeight="200" prefWidth="180" spacing="5" style="-fx-background-color: #E8AF30; -fx-padding: 10px; -fx-border-color: #ccc; -fx-border-width: 1px; -fx-border-radius: 5px;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.TaskCardController">
 
-    <Label fx:id="taskCardTitle" text="Task Title" style="-fx-font-weight: bold;"/>
-    <Label fx:id="taskCardContent"/>
+    <VBox alignment="TOP_CENTER" prefHeight="150" spacing="20">
+        <Label fx:id="taskCardTitle" style="-fx-font-weight: bold;" text="Task Title" />
+        <Label fx:id="taskCardContent" />
+    </VBox>
 
-    <HBox spacing="5" alignment="CENTER">
-        <Button fx:id="ediTaskButton" onAction="#handleEditTask" text="Edit"/>
-        <Button fx:id="deleteTaskButton" onAction="#handleDeleteTask" text="Delete"/>
+    <HBox prefHeight="50" style="-fx-background-color: #162F65;" alignment="CENTER" spacing="20">
+        <Button style="-fx-background-color: #E7E6DD;" fx:id="ediTaskButton" onAction="#handleEditTask" prefHeight="26.0" prefWidth="50.0" text="Edit" />
+        <Button style="-fx-background-color: #E7E6DD;" fx:id="deleteTaskButton" onAction="#handleDeleteTask" prefHeight="26.0" prefWidth="50.0" text="Delete" />
     </HBox>
 </VBox>

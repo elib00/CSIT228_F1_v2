@@ -4,19 +4,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomePageController">
+<BorderPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomePageController"
+            style="-fx-background-color: #E7E6DD;">
 
     <!-- Side Tab -->
     <left>
         <VBox alignment="CENTER" prefWidth="120" spacing="10">
-            <VBox prefHeight="50" spacing="10">
-                <padding>
-                    <Insets bottom="10" left="10" right="10" top="10" />
-                </padding>
-                <Label fx:id="currentUserUName" />
-                <Label fx:id="currentUserEmail" />
-            </VBox>
-            <VBox alignment="CENTER" prefWidth="200" spacing="10" VBox.vgrow="ALWAYS">
+            <VBox alignment="TOP_CENTER" prefWidth="200" spacing="10" VBox.vgrow="ALWAYS">
                 <Button fx:id="editProfileButton" onAction="#handleEditProfile" text="Edit Profile" />
                 <Button fx:id="logoutButton" onAction="#handleLogout" text="Log Out" />
                 <VBox.margin>
@@ -30,17 +25,20 @@
     </left>
 
     <center>
-        <GridPane alignment="CENTER" hgap="10" prefWidth="200" vgap="10">
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
             <padding>
                 <Insets bottom="10" left="10" right="10" top="10" />
             </padding>
-            <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <TextField fx:id="taskCardTitleField" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label style="-fx-font-size: 20px;"  fx:id="currentUserUName" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label  style="-fx-font-size: 20px;"  fx:id="currentUserEmail" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
-            <Label text="Content:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <TextArea fx:id="taskCardContentField" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <Label style="-fx-font-size: 20px;"  text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="taskCardTitleField" GridPane.columnIndex="0" GridPane.rowIndex="3" />
 
-            <HBox alignment="CENTER" spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="4">
+            <Label style="-fx-font-size: 20px;" text="Content:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextArea fx:id="taskCardContentField" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+            <HBox alignment="CENTER" spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="6">
                 <Button fx:id="createTaskButton" onAction="#createTask" text="Create Task" />
                 <Button fx:id="displayTasksButton" onAction="#displayUserTasks" text="Display Tasks" />
             </HBox>
@@ -59,9 +57,9 @@
     </center>
 
     <right>
-        <ScrollPane prefHeight="200" prefWidth="200" vbarPolicy="ALWAYS">
+        <ScrollPane prefWidth="280" style="-fx-background-color: #E7E6DD;">
             <!-- Content to be scrolled -->
-            <VBox fx:id="tasksContainer" VBox.vgrow="ALWAYS">
+            <VBox fx:id="tasksContainer" VBox.vgrow="ALWAYS" alignment="CENTER" spacing="20" prefWidth="280">
 
             </VBox>
         </ScrollPane>

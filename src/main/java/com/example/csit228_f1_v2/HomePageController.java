@@ -30,8 +30,8 @@ public class HomePageController {
     @FXML private TextArea taskCardContentField;
 
     public void setPageValues() {
-        currentUserUName.setText(CurrentUser.username);
-        currentUserEmail.setText(CurrentUser.email);
+        currentUserUName.setText("Username: " + CurrentUser.username);
+        currentUserEmail.setText("Email: " + CurrentUser.email);
 
         try{
             displayUserTasks();

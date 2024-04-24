@@ -9,22 +9,22 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.csit228_f1_v2.EditProfileController"
-      prefHeight="400.0" prefWidth="600.0">
+      prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E8C766">
     <GridPane hgap="10" vgap="10" alignment="CENTER">
-        <Label text="New Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label style="-fx-font-size: 20px;" text="New Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
         <TextField fx:id="editUsernameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-        <Button userData="username" fx:id="editUsernameButton" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#handleEditUserData"/>
+        <Button style="-fx-font-size: 12px; -fx-background-color: #E7E6DD;" userData="username" fx:id="editUsernameButton" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#handleEditUserData"/>
 
-        <Label text="New Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label style="-fx-font-size: 20px;" text="New Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
         <TextField fx:id="editEmailField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-        <Button userData="email" fx:id="editEmailButton" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleEditUserData"/>
+        <Button style="-fx-font-size: 12px; -fx-background-color: #E7E6DD;" userData="email" fx:id="editEmailButton" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#handleEditUserData"/>
 
-        <Label text="New Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label style="-fx-font-size: 20px;" text="New Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
         <PasswordField fx:id="editPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-        <Button userData="password" fx:id="editPasswordButton" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#handleEditUserData"/>
+        <Button style="-fx-font-size: 12px; -fx-background-color: #E7E6DD;" userData="password" fx:id="editPasswordButton" text="Edit" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#handleEditUserData"/>
     </GridPane>
     <HBox spacing="10" alignment="CENTER">
-        <Button text="Delete User" fx:id="deleteUserButton" onAction="#handleDeleteUser"></Button>
-        <Button text="Return" fx:id="backToHomeButton" onAction="#handleReturnToHomePage"/>
+        <Button style="-fx-font-size: 12px; -fx-background-color: #E7E6DD;" text="Delete User" fx:id="deleteUserButton" onAction="#handleDeleteUser"></Button>
+        <Button style="-fx-font-size: 12px; -fx-background-color: #E7E6DD;" text="Return" fx:id="backToHomeButton" onAction="#handleReturnToHomePage"/>
     </HBox>
 </VBox>
