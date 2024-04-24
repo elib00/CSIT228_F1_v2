@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- TaskCard.fxml -->
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.csit228_f1_v2.TaskCardController"
+      prefWidth="280" prefHeight="160" spacing="5"
+      style="-fx-background-color: #f0f0f0; -fx-padding: 10px; -fx-border-color: #ccc; -fx-border-width: 1px; -fx-border-radius: 5px;">
+
+    <Label fx:id="taskCardTitle" text="Task Title" style="-fx-font-weight: bold;"/>
+    <Label fx:id="taskCardContent"/>
+
+    <HBox spacing="5" alignment="CENTER">
+        <Button fx:id="ediTaskButton" onAction="#handleEditTask" text="Edit"/>
+        <Button fx:id="deleteTaskButton" onAction="#handleDeleteTask" text="Delete"/>
+    </HBox>
+</VBox>

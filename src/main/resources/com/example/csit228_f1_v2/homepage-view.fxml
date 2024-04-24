@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomePageController">
+
+    <!-- Side Tab -->
+    <left>
+        <VBox alignment="CENTER" prefWidth="120" spacing="10">
+            <VBox prefHeight="50" spacing="10">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+                <Label fx:id="currentUserUName" />
+                <Label fx:id="currentUserEmail" />
+            </VBox>
+            <VBox alignment="CENTER" prefWidth="200" spacing="10" VBox.vgrow="ALWAYS">
+                <Button fx:id="editProfileButton" onAction="#handleEditProfile" text="Edit Profile" />
+                <Button fx:id="logoutButton" onAction="#handleLogout" text="Log Out" />
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <padding>
+                    <Insets top="10.0" />
+                </padding>
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <GridPane alignment="CENTER" hgap="10" prefWidth="200" vgap="10">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="taskCardTitleField" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+            <Label text="Content:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextArea fx:id="taskCardContentField" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+            <HBox alignment="CENTER" spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                <Button fx:id="createTaskButton" onAction="#createTask" text="Create Task" />
+                <Button fx:id="displayTasksButton" onAction="#displayUserTasks" text="Display Tasks" />
+            </HBox>
+            <columnConstraints>
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+
+        </GridPane>
+    </center>
+
+    <right>
+        <ScrollPane prefHeight="200" prefWidth="200" vbarPolicy="ALWAYS">
+            <!-- Content to be scrolled -->
+            <VBox fx:id="tasksContainer" VBox.vgrow="ALWAYS">
+
+            </VBox>
+        </ScrollPane>
+    </right>
+
+</BorderPane>
